@@ -94,11 +94,12 @@ def initialize_megatron(
         finish_mpu_init()
 
         # Autoresume.
+        ## TODO: wait to see
         _init_autoresume()
 
         # Compile dependencies.
         _compile_dependencies()
-
+        ## TODO: see transformer engine
         if args.tp_comm_overlap:
            _initialize_tp_communicators()
 

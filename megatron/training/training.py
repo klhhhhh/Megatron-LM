@@ -341,6 +341,7 @@ def get_model(model_provider_func, model_type=ModelType.encoder_or_decoder, wrap
     args.model_type = model_type
 
     # Build model.
+    ## read how to build model using transformerlanguagemodel
     if mpu.get_pipeline_model_parallel_world_size() > 1 and \
        args.virtual_pipeline_model_parallel_size is not None:
         assert model_type != ModelType.encoder_and_decoder, \
